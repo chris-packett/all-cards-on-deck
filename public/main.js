@@ -3,6 +3,33 @@ let playerOneDeck = []
 let playerTwoDeck = []
 let battleCardsPlayerOne = []
 let battleCardsPlayerTwo = []
+let cardValues
+let filePath = './cardValue.json'
+let cardValue
+
+
+let request = new XMLHttpRequest()
+request.open('GET', filePath)
+request.responseType = 'json'
+request.send()
+request.onload = (card, card2) => {
+  cardValues = request.response
+  cardValue1 = cardValues[card]
+  cardValue2 = cardValues[card2]
+  if (cardValue1 > cardValue2) {
+    return cardValue1
+  }
+  else if (cardValue2 > cardValue1) {
+    return cardValue2
+  }
+}
+
+const compareBattle = () => {
+  let firstCard = "3 of Spades"
+  let secondCard = "7 of Hearts"
+  let highestCardValue = request.onload(firstCard, secondCard)
+  console.log(highestCardValue)
+}
 
 const createDeck = () => {
   let suits = ['Hearts', 'Clubs', 'Spades', 'Diamonds']
@@ -13,7 +40,7 @@ const createDeck = () => {
       deck.push(card)
     }
   }
-  console.log(deck)
+  // console.log(deck)
   shuffleCards()
 }
 
@@ -23,9 +50,9 @@ const shuffleCards = () => {
     const tempCard = deck[i]
     deck[i] = deck[j]
     deck[j] = tempCard
-    console.log(deck[i])
+    // console.log(deck[i])
   }
-  console.log(deck)
+  // console.log(deck)
 }
 
 const pushPop = (playerDeck, deck) => {
