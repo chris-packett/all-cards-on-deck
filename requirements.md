@@ -22,12 +22,12 @@
     - [ ] create a battle button.
     - [ ] create two player card count output labels under the deal cards buttons.
     - [ ] create a restart button.
-- [ ] Deal cards to both players.
+- [x] Deal cards to both players.
     - [x] when deal cards button is pressed, move half of deck[] to playerOneDeck[] and other half to 
           playerTwoDeck[].
-    - [ ] display card count for both players in card count output labels (they should be 26 each at the beginning).
-- [ ] When card button is pressed for both sides, trigger pushPop, moving the last card of each player's deck to a         new array for each player, called battleCardsPlayerOne[] and battleCardsPlayerTwo[].
-    - [ ] decrement the card count by 1... should happen dynamically because we are using the .length attribute.
+    - [x] display card count for both players in card count output labels (they should be 26 each at the beginning).
+- [x] When card button is pressed for both sides, trigger pushPop, moving the last card of each player's deck to a         new array for each player, called battleCardsPlayerOne[] and battleCardsPlayerTwo[].
+    - [x] decrement the card count by 1.
 - [ ] Implement a key-value pair system to be able to have comparison operators on the "battle".
     - [ ] thinking a dictionary?
 - [ ] See who won the battle.

@@ -1,6 +1,9 @@
 let deck = []
 let playerOneDeck = []
 let playerTwoDeck = []
+let battleCardsPlayerOne = []
+let battleCardsPlayerTwo = []
+
 
 const createDeck = () => {
   let suits = ['Hearts', 'Clubs', 'Spades', 'Diamonds']
@@ -11,7 +14,6 @@ const createDeck = () => {
       deck.push(card)
     }
   }
-  console.log(deck)
   shuffleCards()
 }
 
@@ -37,15 +39,26 @@ const dealCards = () => {
   }
   console.log(playerOneDeck)
   console.log(playerTwoDeck)
-  console.log(deck)
+}
+
+const drawCard = (battleCardDeck, playerDeck, cardOutputDisplay) => {
+  const cardToDeal = battleCardDeck[pushPop(battleCardDeck, playerDeck) - 1]
+  document.querySelector(cardOutputDisplay).textContent = cardToDeal
+  console.log(playerDeck)
+  console.log(battleCardDeck)
+}
+
+const updateCardCounter = (playerDeck, cardCountDisplay) => {
+  const newCount = playerDeck.length
+  document.querySelector(cardCountDisplay).textContent = newCount
 }
 
 document.addEventListener('DOMContentLoaded', createDeck)
 document.querySelector('.deal-cards-button').addEventListener('click', dealCards)
+document.querySelector('#red-card').addEventListener('click', () => drawCard(battleCardsPlayerOne, playerOneDeck, '#card-output-one'))
+document.querySelector('#blue-card').addEventListener('click', () => drawCard(battleCardsPlayerTwo, playerTwoDeck, '#card-output-two'))
+document.querySelector('#red-card').addEventListener('click', () => updateCardCounter(playerOneDeck, '#card-count-output-value-one'))
+document.querySelector('#blue-card').addEventListener('click', () => updateCardCounter(playerTwoDeck, '#card-count-output-value-two'))
 
-// const drawCard = () => {
-//   const cardToDeal = deadCards[pushPop(deadCards, deck) - 1]
-//   document.querySelector('#card-output-one').textContent = cardToDeal
-// }
 
-// document.querySelector('#red-card').addEventListener('click', drawCard)
+

@@ -45,8 +45,8 @@ body {
 
 .deal-cards-button-container {
   display: flex;
-  justify-content: center;
-  padding-top: 1em;
+  justify-content: space-around;
+  padding-top: 2em;
 }
 
 .deal-cards-button {
@@ -71,3 +71,8 @@ body {
 #card-output-two {
   padding: 1em;
 }
+
+.card-count-output-padding {
+  padding: 1em;
+}
+
