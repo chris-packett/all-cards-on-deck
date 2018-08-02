@@ -14,16 +14,16 @@
     - [x] output should be the name of the card (MVP).
     - [x] implement a back of card button instead of a standard html button.
     - [x] pop and push 'deadCards.push(activeCards.pop())' where deadCards and activeCards are arguments of a              function called pushPop(deadCards, activeCards).
-- [ ] Make sure to update variable names based on txt file on main comp.
+- [x] Make sure to update variable names based on txt file on main comp.
 - [ ] Create the ability to have two players in the game (starting to implement "War").
     - [x] create two card buttons, one red, one blue.
-    - [ ] create two player card count output labels under the card buttons.
-    - [ ] create a deal cards button.
-    - [ ] create two player battle card output labels under the deal cards button.
+    - [x] create two player battle card output labels under the card buttons.
+    - [x] create a deal cards button.
     - [ ] create a battle button.
+    - [ ] create two player card count output labels under the deal cards buttons.
     - [ ] create a restart button.
 - [ ] Deal cards to both players.
-    - [ ] when deal cards button is pressed, move half of deck[] to playerOneDeck[] and other half to 
+    - [x] when deal cards button is pressed, move half of deck[] to playerOneDeck[] and other half to 
           playerTwoDeck[].
     - [ ] display card count for both players in card count output labels (they should be 26 each at the beginning).
 - [ ] When card button is pressed for both sides, trigger pushPop, moving the last card of each player's deck to a         new array for each player, called battleCardsPlayerOne[] and battleCardsPlayerTwo[].
