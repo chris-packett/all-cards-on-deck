@@ -12,9 +12,9 @@ let request = new XMLHttpRequest()
 request.open('GET', filePath)
 request.responseType = 'json'
 request.send()
-request.onload = (card, card2) => {
+request.onload = (card1, card2) => {
   cardValues = request.response
-  cardValue1 = cardValues[card]
+  cardValue1 = cardValues[card1]
   cardValue2 = cardValues[card2]
   if (cardValue1 > cardValue2) {
     return cardValue1
@@ -25,9 +25,9 @@ request.onload = (card, card2) => {
 }
 
 const compareBattle = () => {
-  let firstCard = "3 of Spades"
-  let secondCard = "7 of Hearts"
-  let highestCardValue = request.onload(firstCard, secondCard)
+  let firstPlayerBattleCard = battleCardsPlayerOne[0]
+  let secondPlayerBattleCard = battleCardsPlayerTwo[0]
+  let highestCardValue = request.onload(firstPlayerBattleCard, secondPlayerBattleCard)
   console.log(highestCardValue)
 }
 
@@ -40,7 +40,7 @@ const createDeck = () => {
       deck.push(card)
     }
   }
-  // console.log(deck)
+  console.log(deck)
   shuffleCards()
 }
 
@@ -52,7 +52,7 @@ const shuffleCards = () => {
     deck[j] = tempCard
     // console.log(deck[i])
   }
-  // console.log(deck)
+  console.log(deck)
 }
 
 const pushPop = (playerDeck, deck) => {
