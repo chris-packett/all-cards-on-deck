@@ -34,4 +34,4 @@ const pushPop = (deadCards, activeCards) => {
 }
 
 document.addEventListener('DOMContentLoaded', createDeck)
-document.querySelector('#deal-card-button').addEventListener('click', dealCard)
+document.querySelector('.deal-card-button').addEventListener('click', dealCard)

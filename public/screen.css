@@ -6,4 +6,12 @@ body {
   margin: 0;
   min-height: 100%;
   font: 16px / 1 sans-serif;
+  padding: 1em;
+}
+
+.deal-card-button {
+  background-image: url('./assets/back_of_card.png');
+  background-size: cover;
+  height: 17em;
+  width: 12em;
 }
