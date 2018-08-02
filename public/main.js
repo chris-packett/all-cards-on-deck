@@ -4,16 +4,16 @@ let playerTwoDeck = []
 let battleCardsPlayerOne = []
 let battleCardsPlayerTwo = []
 
-
 const createDeck = () => {
   let suits = ['Hearts', 'Clubs', 'Spades', 'Diamonds']
-  let ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'Ace']
+  let ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
   for (let i = 0; i < suits.length; i++) {
     for (let j = 0; j < ranks.length; j++) {
       const card = ranks[j] + ' of ' + suits[i]
       deck.push(card)
     }
   }
+  console.log(deck)
   shuffleCards()
 }
 
@@ -23,6 +23,7 @@ const shuffleCards = () => {
     const tempCard = deck[i]
     deck[i] = deck[j]
     deck[j] = tempCard
+    console.log(deck[i])
   }
   console.log(deck)
 }
