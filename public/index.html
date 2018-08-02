@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="/screen.css">
   </head>
   <body>
-    <button class="deal-card-button"></button>
-    <h3 id="card-output"></h3>
+    <section class="card-button-and-card-output-container">
+      <section class="player-one-card-button-and-card-output-container">
+        <button class="draw-card-button" id="red-card"></button>
+        <h3 class="white-text visibility-background" id="card-output-one">Card Output One</h3>
+      </section>
+      <section class="player-two-card-button-and-card-output-container">
+        <button class="draw-card-button" id="blue-card"></button>
+        <h3 class="white-text visibility-background" id="card-output-two">Card Output Two</h3>
+      </section>
+    </section>
+    <section class="deal-cards-button-container">
+      <button class="deal-cards-button">Deal Cards</button>
+    </section>
     <script src="/main.js" charset="utf-8"></script>
   </body>
 </html>

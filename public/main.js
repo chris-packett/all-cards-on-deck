@@ -26,7 +26,7 @@ const shuffleCards = () => {
 
 const dealCard = () => {
   const cardToDeal = deadCards[pushPop(deadCards, activeCards) - 1]
-  document.querySelector('#card-output').textContent = cardToDeal
+  document.querySelector('#card-output-one').textContent = cardToDeal
 }
 
 const pushPop = (deadCards, activeCards) => {
@@ -34,4 +34,4 @@ const pushPop = (deadCards, activeCards) => {
 }
 
 document.addEventListener('DOMContentLoaded', createDeck)
-document.querySelector('.deal-card-button').addEventListener('click', dealCard)
+document.querySelector('#red-card').addEventListener('click', dealCard)

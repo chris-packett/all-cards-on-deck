@@ -16,7 +16,7 @@
     - [x] pop and push 'deadCards.push(activeCards.pop())' where deadCards and activeCards are arguments of a              function called pushPop(deadCards, activeCards).
 - [ ] Make sure to update variable names based on txt file on main comp.
 - [ ] Create the ability to have two players in the game (starting to implement "War").
-    - [ ] create two card buttons, one red, one blue.
+    - [x] create two card buttons, one red, one blue.
     - [ ] create two player card count output labels under the card buttons.
     - [ ] create a deal cards button.
     - [ ] create two player battle card output labels under the deal cards button.

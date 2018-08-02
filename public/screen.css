@@ -7,11 +7,67 @@ body {
   min-height: 100%;
   font: 16px / 1 sans-serif;
   padding: 1em;
+  background-image: url('./assets/casino-background.jpg');
+  background-size: cover;
 }
 
-.deal-card-button {
-  background-image: url('./assets/back_of_card.png');
+.card-button-and-card-output-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.player-one-card-button-and-card-output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-two-card-button-and-card-output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.draw-card-button {
   background-size: cover;
   height: 17em;
   width: 12em;
+  border-radius: 1em;
+}
+
+#red-card {
+  background-image: url('./assets/red_back_of_card.png');
+}
+
+#blue-card {
+  background-image: url('./assets/blue_back_of_card.png');
+}
+
+.deal-cards-button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.deal-cards-button {
+  width: 8em;
+  height: 4em;
+  border-radius: 1em;
+}
+
+.white-text {
+  color: white;
+}
+
+.visibility-background {
+  background-color: rgba(0,0,0,.6);
+  border-radius: 1em;
+}
+
+#card-output-one {
+  padding: 1em;
+}
+
+#card-output-two {
+  padding: 1em;
 }
